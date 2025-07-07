@@ -39,19 +39,16 @@ export default function Footer() {
     },
     {
       icon: <FaEnvelope className="text-primary-500" />,
-      text: 'ceo@logicandpixel.com',
-      href: 'mailto:ceo@logicandpixel.com',
+      text: 'ceo@randomit.com',
+      href: 'mailto:ceo@randomit.com',
     },
   ];
 
   const socialLinks = [
-    { icon: <FaFacebook className="h-5 w-5" />, href: 'https://facebook.com/logicpixeltech' },
-    { icon: <FaTwitter className="h-5 w-5" />, href: 'https://twitter.com/logicpixeltech' },
-    {
-      icon: <FaLinkedin className="h-5 w-5" />,
-      href: 'https://linkedin.com/company/logicpixeltech',
-    },
-    { icon: <FaGithub className="h-5 w-5" />, href: 'https://github.com/logicpixeltech' },
+    { icon: <FaFacebook className="h-5 w-5" />, href: 'https://facebook.com/randomittech' },
+    { icon: <FaTwitter className="h-5 w-5" />, href: 'https://twitter.com/randomittech' },
+    { icon: <FaLinkedin className="h-5 w-5" />, href: 'https://linkedin.com/company/randomittech' },
+    { icon: <FaGithub className="h-5 w-5" />, href: 'https://github.com/randomittech' },
   ];
 
   return (
@@ -61,7 +58,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-primary-400">Logic & Pixel</span>
+              <span className="text-2xl font-bold text-primary-400">Random IT</span>
               <span className="ml-2 rounded bg-primary-600 px-2 py-1 text-sm font-medium text-white">
                 Tech
               </span>
@@ -154,7 +151,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between border-t border-gray-800 pt-8 md:flex-row">
           <p className="text-sm text-gray-400">
-            &copy; {currentYear} Logic & Pixel Technologies. All rights reserved.
+            &copy; {currentYear} Random IT. All rights reserved.
           </p>
           <div className="mt-4 flex space-x-6 md:mt-0">
             <Link

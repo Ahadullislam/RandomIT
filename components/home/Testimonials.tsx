@@ -17,7 +17,7 @@ const testimonials = [
     name: 'Krishno',
     role: 'Lab Incharge, BSSMU',
     content:
-      'The Inventory Manangement system developed by Logic & Pixel has transformed our workflow highly effective. The platform is intuitive, secure, and has significantly reduced our administrative workload.',
+      'The Inventory Manangement system developed by Random IT has transformed our workflow highly effective. The platform is intuitive, secure, and has significantly reduced our administrative workload.',
     rating: 4,
     image: '/images/testimonials/sarah.jpg',
   },
@@ -25,7 +25,7 @@ const testimonials = [
     name: 'Shovon Kumar Ghosh',
     role: 'Lab Incharge, ApnarLAB',
     content:
-      'The EHR solution  Logic & Pixel they built for us has saved us countless hours and reduced errors by 90%. Their support team is also incredibly responsive.',
+      'The EHR solution  Random IT they built for us has saved us countless hours and reduced errors by 90%. Their support team is also incredibly responsive.',
     rating: 5,
     image: '/images/testimonials/emily.jpg',
   },
@@ -33,7 +33,7 @@ const testimonials = [
     name: 'David Kim',
     role: 'IT Manager, FinTech Global',
     content:
-      'We partnered with Logic & Pixel for our mobile banking app, and the results have been outstanding. Their expertise in security and user experience is unmatched.',
+      'We partnered with Random IT for our mobile banking app, and the results have been outstanding. Their expertise in security and user experience is unmatched.',
     rating: 4,
     image: '/images/testimonials/david.jpg',
   },

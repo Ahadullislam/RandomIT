@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Logic & Pixel Technologies - Innovative IT Solutions',
+  title: 'Random IT - Innovative IT Solutions',
   description:
     'Leading software development company specializing in custom solutions, web development, mobile apps, and enterprise software.',
   keywords: [
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     'healthcare software',
   ],
   openGraph: {
-    title: 'Logic & Pixel Technologies',
+    title: 'Random IT',
     description: 'Innovative IT Solutions for Every Industry',
-    url: 'https://logicpixel.tech',
-    siteName: 'Logic & Pixel Technologies',
+    url: 'https://randomit.tech',
+    siteName: 'Random IT',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Logic & Pixel Technologies',
+        alt: 'Random IT',
       },
     ],
     locale: 'en_US',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Logic & Pixel Technologies',
+    title: 'Random IT',
     description: 'Innovative IT Solutions for Every Industry',
     images: ['/images/og-image.jpg'],
   },
@@ -72,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-grow">{children}</main>
+            <main className="grow">{children}</main>
             <Footer />
           </div>
         </Providers>

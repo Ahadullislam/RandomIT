@@ -37,9 +37,9 @@ export default function AboutUs() {
           viewport={{ once: true }}
           className="mb-8 text-center text-lg text-gray-600 dark:text-gray-300"
         >
-          At Logic & Pixel Technologies, we bridge the gap between operations and innovation through
-          smart, reliable software. From frontline healthcare providers to enterprise
-          decision-makers, we empower organizations to thrive in the digital age.
+          At Random IT, we bridge the gap between operations and innovation through smart, reliable
+          software. From frontline healthcare providers to enterprise decision-makers, we empower
+          organizations to thrive in the digital age.
           <br />
           We blend deep industry knowledge with technical expertise to deliver solutions that are
           not only functional but also intuitive and impactful.

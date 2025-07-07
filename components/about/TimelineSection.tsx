@@ -4,7 +4,7 @@ const timeline = [
   {
     year: '2018',
     title: 'Founded',
-    description: 'Logic & Pixel Technologies was founded with a vision to innovate.',
+    description: 'Random IT was founded with a vision to innovate.',
   },
   {
     year: '2020',

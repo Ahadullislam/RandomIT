@@ -8,14 +8,12 @@ export default function NotFound() {
         <div className="text-9xl font-bold text-primary-600 dark:text-primary-400">404</div>
         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">Page Not Found</h1>
         <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
-          Oops! The page you&apos;re looking for does not exist or has been moved.
+          Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="mt-8">
-          <Link href="/">
-            <Button variant="primary" size="lg">
-              Go back home
-            </Button>
-          </Link>
+          <Button variant="primary" size="lg" asChild>
+            <Link href="/">Go back home</Link>
+          </Button>
         </div>
       </div>
     </div>

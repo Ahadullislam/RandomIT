@@ -11,7 +11,7 @@ const testimonials = [
     company: 'ApnarLAB',
     avatar: '/images/testimonials/male1.png',
     quote:
-      'Logic & Pixel Technologies transformed our lab operations. Their DMS is fast, reliable, and easy to use!',
+      'Random IT transformed our lab operations. Their DMS is fast, reliable, and easy to use!',
   },
   {
     name: 'Uttam Kumar',

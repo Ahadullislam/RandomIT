@@ -58,8 +58,8 @@ export default function ContactSection() {
           </div>
           <div>
             <span className="font-semibold">Email:</span>{' '}
-            <a href="mailto:ceo@logicandpixel.com" className="text-primary-600">
-              ceo@logicandpixel.com
+            <a href="mailto:ceo@randomit.com" className="text-primary-600">
+              ceo@randomit.com
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function ContactSection() {
         </div>
       </div>
       <div className="mt-4 flex justify-center gap-4">
-        <a href="mailto:ceo@logicandpixel.com" className="btn-secondary">
+        <a href="mailto:ceo@randomit.com" className="btn-secondary">
           Email
         </a>
         <a href="tel:+8801336191848" className="btn-secondary">

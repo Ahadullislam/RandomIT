@@ -71,18 +71,19 @@ export function formatDate(
  * @param wait - The time to wait in milliseconds
  * @returns A debounced function
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
-): (...args: Parameters<T>) => void {
+): (...args: Parameters<T>) => ReturnType<T> {
   let timeout: NodeJS.Timeout;
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
+  return function executedFunction(...args: Parameters<T>): ReturnType<T> {
     clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
+    let result: ReturnType<T>;
+    timeout = setTimeout(() => {
+      result = func(...args);
+    }, wait);
+    // @ts-expect-error: result may be undefined if called before timeout
+    return result;
   };
 }
 

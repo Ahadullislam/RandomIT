@@ -66,7 +66,7 @@ export default function Home() {
 
 // Add metadata for better SEO
 export const metadata = {
-  title: 'Logic & Pixel Technologies - Innovative IT Solutions',
+  title: 'Random IT - Innovative IT Solutions',
   description:
     'Leading software development company specializing in custom solutions, web development, mobile apps, and enterprise software.',
   keywords: [
@@ -80,16 +80,16 @@ export const metadata = {
     'healthcare software',
   ],
   openGraph: {
-    title: 'Logic & Pixel Technologies',
+    title: 'Random IT',
     description: 'Innovative IT Solutions for Every Industry',
-    url: 'https://logicpixel.tech',
-    siteName: 'Logic & Pixel Technologies',
+    url: 'https://randomit.tech',
+    siteName: 'Random IT',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Logic & Pixel Technologies',
+        alt: 'Random IT',
       },
     ],
     locale: 'en_US',
@@ -97,7 +97,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Logic & Pixel Technologies',
+    title: 'Random IT',
     description: 'Innovative IT Solutions for Every Industry',
     images: ['/images/og-image.jpg'],
   },

@@ -29,8 +29,8 @@ export default function CallToAction() {
       icon: <FiMail className="h-6 w-6 text-primary-600 dark:text-primary-400" />,
       title: 'Email Us',
       description: 'Get in touch via email',
-      link: 'mailto:ceo@logicandpixel.com',
-      linkText: 'ceo@logicandpixel.com',
+      link: 'mailto:ceo@randomit.com',
+      linkText: 'ceo@randomit.com',
     },
     {
       icon: <FiPhone className="h-6 w-6 text-primary-600 dark:text-primary-400" />,

@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-12">
         <section className="mb-12 text-center">
           <h1 className="mb-4 text-4xl font-bold text-primary-700 drop-shadow-lg dark:text-primary-300 md:text-5xl">
-            About Logic & Pixel Technologies
+            About Random IT
           </h1>
           <p className="mb-6 text-lg text-gray-700 dark:text-gray-200">
             We are passionate about delivering innovative IT solutions that empower businesses and
