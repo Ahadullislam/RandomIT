@@ -119,7 +119,7 @@ export default function Header() {
                     <button
                       onClick={() => toggleSubmenu(item.name)}
                       className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${
-                        pathname.startsWith(item.href)
+                        pathname?.startsWith(item.href)
                           ? 'text-primary-600 dark:text-primary-400'
                           : 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
                       }`}
@@ -227,7 +227,7 @@ export default function Header() {
                       <button
                         onClick={() => toggleSubmenu(item.name)}
                         className={`flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium ${
-                          pathname.startsWith(item.href)
+                          pathname?.startsWith(item.href)
                             ? 'text-primary-600 dark:text-primary-400'
                             : 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
                         }`}
