@@ -45,10 +45,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: <FaFacebook className="h-5 w-5" />, href: 'https://facebook.com/randomittech' },
-    { icon: <FaTwitter className="h-5 w-5" />, href: 'https://twitter.com/randomittech' },
-    { icon: <FaLinkedin className="h-5 w-5" />, href: 'https://linkedin.com/company/randomittech' },
-    { icon: <FaGithub className="h-5 w-5" />, href: 'https://github.com/randomittech' },
+    { icon: <FaFacebook className="size-5" />, href: 'https://facebook.com/randomittech' },
+    { icon: <FaTwitter className="size-5" />, href: 'https://twitter.com/randomittech' },
+    { icon: <FaLinkedin className="size-5" />, href: 'https://linkedin.com/company/randomittech' },
+    { icon: <FaGithub className="size-5" />, href: 'https://github.com/randomittech' },
   ];
 
   return (

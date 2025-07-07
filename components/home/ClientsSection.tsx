@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import ParticlesBackground from '@/components/ui/ParticlesBackground';
+import Image from 'next/image';
 
 const clients = [
   { name: 'BSSMU', image: '/images/industries/bsmmu.png' },
@@ -51,11 +52,12 @@ export default function ClientsSection() {
                   boxShadow: '0 4px 24px 0 rgba(80, 120, 255, 0.10)',
                 }}
               >
-                <img
+                <Image
                   src={client.image}
                   alt={client.name}
+                  width={80}
+                  height={80}
                   className="h-20 w-20 rounded-xl object-cover drop-shadow-lg"
-                  draggable="false"
                 />
               </div>
             ))}

@@ -64,7 +64,7 @@ export default function LISPage() {
               transition={{ delay: 0.5 + idx * 0.1, duration: 0.5 }}
               className="flex items-center gap-3 text-lg text-gray-700 dark:text-gray-200"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-500 text-white shadow">
+              <span className="flex size-6 items-center justify-center rounded-full bg-primary-500 text-white shadow">
                 {String.fromCodePoint(0x2714)}
               </span>
               {feature}

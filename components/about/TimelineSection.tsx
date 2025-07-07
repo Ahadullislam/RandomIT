@@ -33,17 +33,14 @@ export default function TimelineSection() {
     <section className="mb-16">
       <h2 className="mb-8 text-center text-3xl font-bold">Our Journey</h2>
       <ol className="relative ml-4 border-l-4 border-primary-200 dark:border-primary-800">
-        {timeline.map((item, idx) => (
-          <li key={item.year} className="mb-10 ml-6">
-            <span className="absolute -left-5 flex h-8 w-8 items-center justify-center rounded-full bg-primary-500 text-lg font-bold text-white ring-4 ring-white dark:ring-gray-900">
-              {item.year[2]}
-              {item.year[3]}
-            </span>
-            <div className="group rounded-xl bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-xl dark:bg-gray-800">
-              <h3 className="mb-1 text-xl font-semibold text-primary-700 dark:text-primary-300">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+        {timeline.map((event) => (
+          <li key={event.year} className="mb-8 flex items-center">
+            <div className="size-8 flex items-center justify-center rounded-full bg-primary-600 text-white shadow-lg">
+              <span className="text-lg font-bold">{event.year}</span>
+            </div>
+            <div className="ml-4">
+              <h4 className="text-lg font-semibold text-primary-700 dark:text-primary-300">{event.title}</h4>
+              <p className="text-gray-600 dark:text-gray-400">{event.description}</p>
             </div>
           </li>
         ))}

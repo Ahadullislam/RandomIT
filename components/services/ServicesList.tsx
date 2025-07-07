@@ -99,8 +99,8 @@ export default function ServicesList() {
           <div className="relative h-80 w-full transition-transform duration-200 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             {/* Front Side */}
             <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-primary-100 bg-white/70 p-8 shadow-xl backdrop-blur-lg transition-all duration-200 [backface-visibility:hidden] group-hover:scale-105 group-hover:shadow-2xl dark:border-primary-800 dark:bg-gray-900/70">
-              <div className="mb-4 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-primary-200 bg-primary-50/60 transition-transform duration-200 group-hover:scale-110 group-hover:shadow-lg dark:border-primary-700 dark:bg-primary-900/60">
-                <Lottie animationData={service.icon} loop className="h-16 w-16" />
+              <div className="mb-4 flex size-20 items-center justify-center overflow-hidden rounded-full border border-primary-200 bg-primary-50/60 transition-transform duration-200 group-hover:scale-110 group-hover:shadow-lg dark:border-primary-700 dark:bg-primary-900/60">
+                <Lottie animationData={service.icon} loop className="size-16" />
               </div>
               <h3 className="mb-2 text-center text-xl font-bold transition-colors duration-200 group-hover:text-primary-600 dark:group-hover:text-primary-400">
                 {service.title}

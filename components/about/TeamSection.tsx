@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const team = [
   // Fill with real data later
@@ -50,11 +51,7 @@ export default function TeamSection() {
             key={member.name}
             className="group flex flex-col items-center rounded-2xl border border-primary-100 bg-white/30 p-8 shadow-xl backdrop-blur-lg transition-shadow duration-300 hover:shadow-2xl dark:border-primary-800 dark:bg-gray-900/30"
           >
-            <img
-              src={member.image.replace('public/', '/')}
-              alt={member.name}
-              className="mb-4 h-28 w-28 rounded-full border-4 border-primary-200 bg-white/60 object-cover transition-transform duration-300 group-hover:scale-105 dark:bg-gray-800/60"
-            />
+            <Image src={member.image} alt={member.name} width={112} height={112} className="size-28 rounded-full object-cover shadow-lg" />
             <h3 className="mb-1 text-center text-xl font-bold text-primary-700 dark:text-primary-300">
               {member.name}
             </h3>

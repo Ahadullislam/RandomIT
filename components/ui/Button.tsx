@@ -4,7 +4,20 @@ import { ButtonHTMLAttributes, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import type { MotionProps } from 'framer-motion';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonBaseProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  | 'onAnimationStart'
+  | 'onDrag'
+  | 'onDragStart'
+  | 'onDragEnd'
+  | 'onDragOver'
+  | 'onDragEnter'
+  | 'onDragLeave'
+  | 'onDrop'
+  | 'style'
+>;
+
+interface ButtonProps extends ButtonBaseProps, MotionProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
@@ -52,7 +65,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     // Loading state
     const loadingIcon = (
       <svg
-        className="-ml-1 mr-2 h-4 w-4 animate-spin text-current"
+        className="-ml-1 mr-2 size-4 animate-spin text-current"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

@@ -12,18 +12,18 @@ export default function ContactSection() {
               type="text"
               required
               placeholder="Name"
-              className="input input-bordered"
+              className="border rounded px-3 py-2 w-full"
             />
             <input
               name="email"
               type="email"
               required
               placeholder="Email"
-              className="input input-bordered"
+              className="border rounded px-3 py-2 w-full"
             />
           </div>
-          <input name="phone" type="tel" placeholder="Phone" className="input input-bordered" />
-          <select name="service" className="input input-bordered">
+          <input name="phone" type="tel" placeholder="Phone" className="border rounded px-3 py-2 w-full" />
+          <select name="service" className="border rounded px-3 py-2 w-full">
             <option value="">Service Interested In</option>
             <option value="dms">Diagnostic Management System</option>
             <option value="ehr">Electronic Health Records</option>
@@ -37,7 +37,7 @@ export default function ContactSection() {
             name="message"
             required
             placeholder="Message"
-            className="input input-bordered min-h-[100px]"
+            className="border rounded px-3 py-2 w-full min-h-[100px]"
           />
           <button type="submit" className="btn-primary w-full">
             Send Message

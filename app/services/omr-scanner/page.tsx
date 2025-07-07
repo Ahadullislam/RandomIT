@@ -78,7 +78,7 @@ export default function OMRScannerPage() {
               transition={{ delay: 0.5 + idx * 0.1, duration: 0.5 }}
               className="flex items-center gap-3 text-lg text-gray-700 dark:text-gray-200"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-500 text-white shadow">
+              <span className="flex size-6 items-center justify-center rounded-full bg-primary-500 text-white shadow">
                 {String.fromCodePoint(0x2714)}
               </span>
               {feature}
@@ -104,7 +104,7 @@ export default function OMRScannerPage() {
               transition={{ delay: 0.7 + idx * 0.1, duration: 0.5 }}
               className="flex items-center gap-3 text-base text-gray-700 dark:text-gray-200"
             >
-              <span className="inline-block h-4 w-4 rounded-full bg-primary-400"></span>
+              <span className="inline-block size-4 rounded-full bg-primary-400"></span>
               {item}
             </motion.li>
           ))}

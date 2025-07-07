@@ -9,7 +9,7 @@ const industries = [
     description: 'Transforming healthcare delivery with innovative technology solutions.',
     icon: (
       <svg
-        className="h-8 w-8"
+        className="size-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -31,7 +31,7 @@ const industries = [
     description: 'Empowering educational institutions with digital learning tools.',
     icon: (
       <svg
-        className="h-8 w-8"
+        className="size-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -55,7 +55,7 @@ const industries = [
     description: 'Enhancing retail experiences with cutting-edge technology.',
     icon: (
       <svg
-        className="h-8 w-8"
+        className="size-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ const industries = [
     description: 'Driving efficiency in manufacturing with smart solutions.',
     icon: (
       <svg
-        className="h-8 w-8"
+        className="size-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -99,7 +99,7 @@ const industries = [
     description: 'Secure and scalable financial technology solutions.',
     icon: (
       <svg
-        className="h-8 w-8"
+        className="size-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ const industries = [
     description: 'Optimizing supply chain with advanced tracking systems.',
     icon: (
       <svg
-        className="h-8 w-8"
+        className="size-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -208,7 +208,7 @@ export default function Industries() {
                 <span className="inline-flex items-center text-sm font-medium text-primary-600 group-hover:underline dark:text-primary-400">
                   Learn more
                   <svg
-                    className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    className="ml-1 size-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

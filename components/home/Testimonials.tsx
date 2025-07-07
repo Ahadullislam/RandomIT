@@ -81,7 +81,7 @@ export default function Testimonials() {
       .map((_, i) => (
         <FiStar
           key={i}
-          className={`h-5 w-5 ${i < rating ? 'fill-current text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
+          className={`size-5 ${i < rating ? 'fill-current text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
         />
       ));
   };
@@ -114,7 +114,7 @@ export default function Testimonials() {
             className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-x-4 -translate-y-1/2 items-center justify-center rounded-full bg-white text-gray-700 shadow-lg hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 dark:text-gray-200 dark:hover:text-primary-400 md:flex"
             aria-label="Previous testimonial"
           >
-            <FiChevronLeft className="h-6 w-6" />
+            <FiChevronLeft className="size-6" />
           </button>
 
           <div
@@ -131,11 +131,11 @@ export default function Testimonials() {
                 <motion.div
                   key={index}
                   variants={item}
-                  className="w-full flex-shrink-0 snap-center px-4 sm:w-2/3 md:w-1/2 lg:w-1/3"
+                  className="w-full shrink-0 snap-center px-4 sm:w-2/3 md:w-1/2 lg:w-1/3"
                 >
                   <div className="flex h-full flex-col rounded-xl bg-white p-6 shadow-md dark:bg-gray-800">
                     <div className="mb-4 flex items-center">
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
                           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary-100 to-primary-200 text-lg font-bold text-primary-600 dark:from-primary-900 dark:to-primary-800 dark:text-primary-300">
                             {testimonial.name.charAt(0)}
@@ -152,7 +152,7 @@ export default function Testimonials() {
                       </div>
                     </div>
                     <div className="mb-4 flex">{renderStars(testimonial.rating)}</div>
-                    <blockquote className="mb-6 flex-grow text-gray-600 dark:text-gray-300">
+                    <blockquote className="mb-6 grow text-gray-600 dark:text-gray-300">
                       <p className="relative italic">
                         <span className="absolute -left-4 -top-2 text-4xl text-gray-200 dark:text-gray-700">
                           "
@@ -171,7 +171,7 @@ export default function Testimonials() {
             className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 translate-x-4 items-center justify-center rounded-full bg-white text-gray-700 shadow-lg hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 dark:text-gray-200 dark:hover:text-primary-400 md:flex"
             aria-label="Next testimonial"
           >
-            <FiChevronRight className="h-6 w-6" />
+            <FiChevronRight className="size-6" />
           </button>
         </div>
 
@@ -190,7 +190,7 @@ export default function Testimonials() {
                   });
                 }
               }}
-              className={`h-3 w-3 rounded-full transition-colors ${
+              className={`size-3 rounded-full transition-colors ${
                 index === 0
                   ? 'w-8 bg-primary-600 dark:bg-primary-400'
                   : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500'
