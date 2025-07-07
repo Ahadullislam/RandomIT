@@ -31,7 +31,9 @@ export function formatCurrency(amount: number, currency: string = 'USD'): string
  * @returns A random string ID
  */
 export function generateId(length: number = 8): string {
-  return Math.random().toString(36).substring(2, 2 + length);
+  return Math.random()
+    .toString(36)
+    .substring(2, 2 + length);
 }
 
 /**

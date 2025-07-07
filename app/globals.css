@@ -20,11 +20,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
   font-family: 'Inter', sans-serif;
 }
@@ -35,9 +31,15 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Custom scrollbar */
@@ -68,11 +70,11 @@ body {
 
 /* Custom components */
 .btn-primary {
-  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  @apply transform rounded-lg bg-primary-600 px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary-700 hover:shadow-xl;
 }
 
 .btn-secondary {
-  @apply bg-secondary-600 hover:bg-secondary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  @apply transform rounded-lg bg-secondary-600 px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-secondary-700 hover:shadow-xl;
 }
 
 .section-padding {
@@ -80,7 +82,7 @@ body {
 }
 
 .container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
 /* Animation classes */
@@ -107,9 +109,9 @@ body {
 
 /* Custom utility classes */
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500;
+  @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
 }
 
 .card-hover {
-  @apply transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl;
+  @apply transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
 }

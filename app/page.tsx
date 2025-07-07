@@ -35,7 +35,7 @@ const CallToAction = dynamic(() => import('@/components/home/CallToAction'), {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col relative overflow-hidden">
+    <main className="relative flex min-h-screen flex-col overflow-hidden">
       <ParticlesBackground key="home-particles" />
       <div className="relative z-10">
         <Suspense fallback={<Skeleton className="h-screen w-full" />}>
@@ -67,8 +67,18 @@ export default function Home() {
 // Add metadata for better SEO
 export const metadata = {
   title: 'Logic & Pixel Technologies - Innovative IT Solutions',
-  description: 'Leading software development company specializing in custom solutions, web development, mobile apps, and enterprise software.',
-  keywords: ['software development', 'web development', 'mobile apps', 'custom software', 'IT solutions', 'EHR', 'ERP', 'healthcare software'],
+  description:
+    'Leading software development company specializing in custom solutions, web development, mobile apps, and enterprise software.',
+  keywords: [
+    'software development',
+    'web development',
+    'mobile apps',
+    'custom software',
+    'IT solutions',
+    'EHR',
+    'ERP',
+    'healthcare software',
+  ],
   openGraph: {
     title: 'Logic & Pixel Technologies',
     description: 'Innovative IT Solutions for Every Industry',

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
 import ParticlesBackground from '@/components/ui/ParticlesBackground';
@@ -22,20 +22,20 @@ export default function ClientsSection() {
   }, []);
 
   return (
-    <section className="py-16 relative">
+    <section className="relative py-16">
       <ParticlesBackground />
       <div className="absolute inset-0 -z-10" />
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary-700 dark:text-primary-300 drop-shadow">
+      <h2 className="mb-8 text-center text-2xl font-bold text-primary-700 drop-shadow dark:text-primary-300 md:text-3xl">
         Our Clients
       </h2>
       <div
-        className="relative overflow-x-hidden rounded-2xl shadow-xl max-w-5xl mx-auto bg-white/30 dark:bg-gray-900/30 backdrop-blur-lg border border-primary-100 dark:border-primary-900"
+        className="relative mx-auto max-w-5xl overflow-x-hidden rounded-2xl border border-primary-100 bg-white/30 shadow-xl backdrop-blur-lg dark:border-primary-900 dark:bg-gray-900/30"
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
       >
         <div
           ref={marqueeRef}
-          className={`whitespace-nowrap flex items-center gap-10 animate-marquee${
+          className={`flex items-center gap-10 whitespace-nowrap animate-marquee${
             hovering ? '' : ' paused'
           }`}
           style={{ minWidth: '100vw' }}
@@ -46,7 +46,7 @@ export default function ClientsSection() {
             .map((client, idx) => (
               <div
                 key={client.name + idx}
-                className="w-28 h-28 rounded-2xl bg-white/60 dark:bg-gray-800/60 shadow-lg flex items-center justify-center mx-2 border-2 border-primary-200 dark:border-primary-800 overflow-hidden transition-transform duration-300 hover:scale-110 hover:shadow-2xl backdrop-blur-md"
+                className="mx-2 flex h-28 w-28 items-center justify-center overflow-hidden rounded-2xl border-2 border-primary-200 bg-white/60 shadow-lg backdrop-blur-md transition-transform duration-300 hover:scale-110 hover:shadow-2xl dark:border-primary-800 dark:bg-gray-800/60"
                 style={{
                   boxShadow: '0 4px 24px 0 rgba(80, 120, 255, 0.10)',
                 }}
@@ -54,7 +54,7 @@ export default function ClientsSection() {
                 <img
                   src={client.image}
                   alt={client.name}
-                  className="w-20 h-20 object-cover rounded-xl drop-shadow-lg"
+                  className="h-20 w-20 rounded-xl object-cover drop-shadow-lg"
                   draggable="false"
                 />
               </div>

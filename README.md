@@ -20,12 +20,14 @@ A modern, responsive website for Random IT built with Next.js, TypeScript, and T
 ## Getting Started
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/your-username/logic-pixel-tech.git
    cd logic-pixel-tech
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -33,6 +35,7 @@ A modern, responsive website for Random IT built with Next.js, TypeScript, and T
    ```
 
 3. **Run the development server**
+
    ```bash
    npm run dev
    # or

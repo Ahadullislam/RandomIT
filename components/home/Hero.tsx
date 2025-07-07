@@ -35,42 +35,45 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative overflow-hidden py-20 md:py-32">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary-200 dark:bg-primary-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-secondary-200 dark:bg-secondary-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3 h-1/3 bg-pink-200 dark:bg-pink-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="animate-blob absolute right-0 top-0 h-1/3 w-1/3 rounded-full bg-primary-200 opacity-20 mix-blend-multiply blur-3xl filter dark:bg-primary-900"></div>
+        <div className="animate-blob animation-delay-2000 absolute bottom-0 left-0 h-1/3 w-1/3 rounded-full bg-secondary-200 opacity-20 mix-blend-multiply blur-3xl filter dark:bg-secondary-800"></div>
+        <div className="animate-blob animation-delay-4000 absolute left-1/2 top-1/2 h-1/3 w-1/3 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-pink-200 opacity-20 mix-blend-multiply blur-3xl filter dark:bg-pink-900"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
-          className="max-w-4xl mx-auto text-center"
+          className="mx-auto max-w-4xl text-center"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
           <motion.div variants={itemVariants} className="mb-6">
-            <span className="inline-block px-3 py-1 text-sm font-semibold text-primary-700 dark:text-primary-300 bg-white dark:bg-gray-800 rounded-full shadow-sm">
+            <span className="inline-block rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-700 shadow-sm dark:bg-gray-800 dark:text-primary-300">
               Welcome to Random IT
             </span>
           </motion.div>
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
+            className="mb-6 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-6xl"
           >
             Innovative, Secure, and Customizable Software Solutions
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto"
+            className="mx-auto mb-6 max-w-3xl text-xl text-gray-600 dark:text-gray-300"
           >
-            At Random IT, we craft innovative, secure, and customizable software solutions designed to simplify complex workflows. Whether you’re running a hospital, diagnostic lab, or a growing enterprise — we provide digital systems that improve efficiency, accuracy, and outcomes.
+            At Random IT, we craft innovative, secure, and customizable software solutions designed
+            to simplify complex workflows. Whether you’re running a hospital, diagnostic lab, or a
+            growing enterprise — we provide digital systems that improve efficiency, accuracy, and
+            outcomes.
           </motion.p>
           <motion.ul
             variants={itemVariants}
-            className="mb-10 max-w-2xl mx-auto text-base text-gray-700 dark:text-gray-200 grid grid-cols-1 sm:grid-cols-2 gap-2 text-left"
+            className="mx-auto mb-10 grid max-w-2xl grid-cols-1 gap-2 text-left text-base text-gray-700 dark:text-gray-200 sm:grid-cols-2"
           >
             <li>• Expertise in healthcare, diagnostics, and enterprise automation</li>
             <li>• Solutions tailored for hospitals, labs, and businesses</li>
@@ -79,44 +82,47 @@ export default function Hero() {
           </motion.ul>
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row justify-center gap-4"
+            className="flex flex-col justify-center gap-4 sm:flex-row"
           >
             <Link href="/services" className="btn-primary">
               Explore Our Solutions
             </Link>
-            <Link
-              href="/contact"
-              className="btn-secondary"
-            >
+            <Link href="/contact" className="btn-secondary">
               Contact Us
             </Link>
           </motion.div>
         </motion.div>
         {/* Hero Image/Animation */}
         <motion.div
-          className="mt-16 md:mt-24 relative"
+          className="relative mt-16 md:mt-24"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
           <div className="relative mx-auto max-w-5xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-secondary-500 rounded-2xl shadow-2xl opacity-20 blur-3xl"></div>
-            <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9 w-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-400 to-secondary-500 opacity-20 shadow-2xl blur-3xl"></div>
+            <div className="relative overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-gray-800">
+              <div className="aspect-w-16 aspect-h-9 flex w-full items-center justify-center bg-gray-100 dark:bg-gray-700">
                 {/* Removed Custom Software Solutions card for cleaner About Us section */}
               </div>
             </div>
           </div>
           {/* Animated elements */}
           <motion.div
-            className="absolute -top-8 -left-8 w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full hidden md:block"
+            className="absolute -left-8 -top-8 hidden h-20 w-20 rounded-full bg-primary-100 dark:bg-primary-900 md:block"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
           />
           <motion.div
-            className="absolute -bottom-8 -right-8 w-24 h-24 bg-secondary-100 dark:bg-secondary-900 rounded-full hidden md:block"
+            className="absolute -bottom-8 -right-8 hidden h-24 w-24 rounded-full bg-secondary-100 dark:bg-secondary-900 md:block"
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: 0.5 }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+              delay: 0.5,
+            }}
           />
         </motion.div>
       </div>

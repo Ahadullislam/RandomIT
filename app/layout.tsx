@@ -5,7 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Providers } from '@/components/providers/Providers';
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 });
@@ -18,8 +18,18 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Logic & Pixel Technologies - Innovative IT Solutions',
-  description: 'Leading software development company specializing in custom solutions, web development, mobile apps, and enterprise software.',
-  keywords: ['software development', 'web development', 'mobile apps', 'custom software', 'IT solutions', 'EHR', 'ERP', 'healthcare software'],
+  description:
+    'Leading software development company specializing in custom solutions, web development, mobile apps, and enterprise software.',
+  keywords: [
+    'software development',
+    'web development',
+    'mobile apps',
+    'custom software',
+    'IT solutions',
+    'EHR',
+    'ERP',
+    'healthcare software',
+  ],
   openGraph: {
     title: 'Logic & Pixel Technologies',
     description: 'Innovative IT Solutions for Every Industry',
@@ -53,20 +63,16 @@ export const viewport = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}>
+      <body
+        className={`${inter.variable} ${poppins.variable} bg-white font-sans text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100`}
+      >
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
+            <main className="flex-grow">{children}</main>
             <Footer />
           </div>
         </Providers>

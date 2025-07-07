@@ -91,35 +91,33 @@ export default function Header() {
 			initial={{ y: 0, opacity: 1 }}
 			animate={{ y: showHeader ? 0 : -100, opacity: showHeader ? 1 : 0 }}
 			transition={{ type: 'spring', stiffness: 300, damping: 30, duration: 0.3 }}
-			className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-					? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
-					: 'bg-transparent'
+			className={`fixed z-50 w-full transition-all duration-300 ${scrolled ? 'bg-white/90 shadow-lg backdrop-blur-md dark:bg-gray-900/90' : 'bg-transparent'
 				}`}
 			style={{ pointerEvents: showHeader ? 'auto' : 'none' }}
 		>
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between h-20">
+				<div className="flex h-20 items-center justify-between">
 					{/* Logo */}
 					<div className="flex-shrink-0">
 						<Link href="/" className="flex items-center">
 							<span className="text-2xl font-bold text-primary-600 dark:text-primary-400">
 								Random IT
 							</span>
-							<span className="text-sm font-medium bg-primary-600 text-white px-2 py-1 rounded ml-2">
+							<span className="ml-2 rounded bg-primary-600 px-2 py-1 text-sm font-medium text-white">
 								Tech
 							</span>
 						</Link>
 					</div>
 
 					{/* Desktop Navigation */}
-					<nav className="hidden md:flex items-center space-x-1 ml-auto">
+					<nav className="ml-auto hidden items-center space-x-1 md:flex">
 						{navigation.map((item) => (
-							<div key={item.name} className="relative group">
+							<div key={item.name} className="group relative">
 								{item.submenu ? (
 									<div className="relative">
 										<button
 											onClick={() => toggleSubmenu(item.name)}
-											className={`px-3 py-2 rounded-md text-sm font-medium flex items-center ${pathname.startsWith(item.href)
+											className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${pathname?.startsWith(item.href)
 													? 'text-primary-600 dark:text-primary-400'
 													: 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
 												}`}
@@ -135,7 +133,7 @@ export default function Header() {
 													animate={{ opacity: 1, y: 0 }}
 													exit={{ opacity: 0, y: 10 }}
 													transition={{ duration: 0.2 }}
-													className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+													className="absolute left-0 z-50 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800"
 												>
 													<div className="py-1">
 														{item.submenu.map((subItem) => (
@@ -155,7 +153,7 @@ export default function Header() {
 								) : (
 									<Link
 										href={item.href}
-										className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === item.href
+										className={`rounded-md px-3 py-2 text-sm font-medium ${pathname === item.href
 												? 'text-primary-600 dark:text-primary-400'
 												: 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
 											}`}
@@ -167,42 +165,34 @@ export default function Header() {
 						))}
 					</nav>
 
-					<div className="hidden md:flex items-center space-x-4">
+					<div className="hidden items-center space-x-4 md:flex">
 						<button
 							onClick={toggleTheme}
-							className="p-2 rounded-full text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 focus:outline-none"
+							className="rounded-full p-2 text-gray-700 hover:text-primary-600 focus:outline-none dark:text-gray-300 dark:hover:text-primary-400"
 							aria-label="Toggle theme"
 						>
-							{theme === 'dark' ? (
-								<FiSun className="h-5 w-5" />
-							) : (
-								<FiMoon className="h-5 w-5" />
-							)}
+							{theme === 'dark' ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
 						</button>
 						<Link
 							href="/contact"
-							className="px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-md hover:bg-primary-700 transition-colors duration-200"
+							className="rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-primary-700"
 						>
 							Get a Quote
 						</Link>
 					</div>
 
 					{/* Mobile menu button */}
-					<div className="flex md:hidden items-center">
+					<div className="flex items-center md:hidden">
 						<button
 							onClick={toggleTheme}
-							className="p-2 rounded-full text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 focus:outline-none mr-2"
+							className="mr-2 rounded-full p-2 text-gray-700 hover:text-primary-600 focus:outline-none dark:text-gray-300 dark:hover:text-primary-400"
 							aria-label="Toggle theme"
 						>
-							{theme === 'dark' ? (
-								<FiSun className="h-5 w-5" />
-							) : (
-								<FiMoon className="h-5 w-5" />
-							)}
+							{theme === 'dark' ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
 						</button>
 						<button
 							onClick={() => setIsOpen(!isOpen)}
-							className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 focus:outline-none"
+							className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:text-primary-600 focus:outline-none dark:text-gray-300 dark:hover:text-primary-400"
 							aria-expanded="false"
 						>
 							<span className="sr-only">Open main menu</span>
@@ -224,16 +214,16 @@ export default function Header() {
 						animate={{ opacity: 1, height: 'auto' }}
 						exit={{ opacity: 0, height: 0 }}
 						transition={{ duration: 0.3 }}
-						className="md:hidden bg-white dark:bg-gray-900 shadow-lg"
+						className="bg-white shadow-lg dark:bg-gray-900 md:hidden"
 					>
-						<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+						<div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
 							{navigation.map((item) => (
 								<div key={item.name}>
 									{item.submenu ? (
 										<div>
 											<button
 												onClick={() => toggleSubmenu(item.name)}
-												className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${pathname.startsWith(item.href)
+												className={`flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium ${pathname?.startsWith(item.href)
 														? 'text-primary-600 dark:text-primary-400'
 														: 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
 													}`}
@@ -250,13 +240,13 @@ export default function Header() {
 														initial={{ opacity: 0, height: 0 }}
 														animate={{ opacity: 1, height: 'auto' }}
 														exit={{ opacity: 0, height: 0 }}
-														className="pl-4 space-y-1"
+														className="space-y-1 pl-4"
 													>
 														{item.submenu.map((subItem) => (
 															<Link
 																key={subItem.name}
 																href={subItem.href}
-																className="block px-3 py-2 text-sm rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-primary-400 dark:hover:bg-gray-800"
+																className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-primary-400"
 															>
 																{subItem.name}
 															</Link>
@@ -268,7 +258,7 @@ export default function Header() {
 									) : (
 										<Link
 											href={item.href}
-											className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === item.href
+											className={`block rounded-md px-3 py-2 text-base font-medium ${pathname === item.href
 													? 'text-primary-600 dark:text-primary-400'
 													: 'text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400'
 												}`}
@@ -278,10 +268,10 @@ export default function Header() {
 									)}
 								</div>
 							))}
-							<div className="pt-4 pb-2">
+							<div className="pb-2 pt-4">
 								<Link
 									href="/contact"
-									className="block w-full text-center px-4 py-2 bg-primary-600 text-white text-base font-medium rounded-md hover:bg-primary-700 transition-colors duration-200"
+									className="block w-full rounded-md bg-primary-600 px-4 py-2 text-center text-base font-medium text-white transition-colors duration-200 hover:bg-primary-700"
 								>
 									Get a Quote
 								</Link>

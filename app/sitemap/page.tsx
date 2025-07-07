@@ -1,8 +1,8 @@
 export default function SitemapPage() {
   return (
-    <main className="min-h-screen py-12 px-4 md:px-12 max-w-2xl mx-auto">
-      <h1 className="text-3xl md:text-5xl font-bold mb-6">Sitemap</h1>
-      <ul className="list-disc ml-6 space-y-2">
+    <main className="mx-auto min-h-screen max-w-2xl px-4 py-12 md:px-12">
+      <h1 className="mb-6 text-3xl font-bold md:text-5xl">Sitemap</h1>
+      <ul className="ml-6 list-disc space-y-2">
         <li>Home</li>
         <li>About Us</li>
         <li>Services</li>

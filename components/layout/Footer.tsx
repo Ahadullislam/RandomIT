@@ -1,9 +1,17 @@
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
@@ -20,43 +28,47 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { 
-      icon: <FaMapMarkerAlt className="text-primary-500" />, 
-      text: 'House:232/a, Road 60 Feet West Agargaon, Dhaka 1207' 
+    {
+      icon: <FaMapMarkerAlt className="text-primary-500" />,
+      text: 'House:232/a, Road 60 Feet West Agargaon, Dhaka 1207',
     },
-    { 
-      icon: <FaPhone className="text-primary-500" />, 
+    {
+      icon: <FaPhone className="text-primary-500" />,
       text: '+8801336191848',
-      href: 'tel:+8801336191848'
+      href: 'tel:+8801336191848',
     },
-    { 
-      icon: <FaEnvelope className="text-primary-500" />, 
+    {
+      icon: <FaEnvelope className="text-primary-500" />,
       text: 'ceo@logicandpixel.com',
-      href: 'mailto:ceo@logicandpixel.com'
+      href: 'mailto:ceo@logicandpixel.com',
     },
   ];
 
   const socialLinks = [
     { icon: <FaFacebook className="h-5 w-5" />, href: 'https://facebook.com/logicpixeltech' },
     { icon: <FaTwitter className="h-5 w-5" />, href: 'https://twitter.com/logicpixeltech' },
-    { icon: <FaLinkedin className="h-5 w-5" />, href: 'https://linkedin.com/company/logicpixeltech' },
+    {
+      icon: <FaLinkedin className="h-5 w-5" />,
+      href: 'https://linkedin.com/company/logicpixeltech',
+    },
     { icon: <FaGithub className="h-5 w-5" />, href: 'https://github.com/logicpixeltech' },
   ];
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gray-900 pb-8 pt-16 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
               <span className="text-2xl font-bold text-primary-400">Logic & Pixel</span>
-              <span className="text-sm font-medium bg-primary-600 text-white px-2 py-1 rounded ml-2">
+              <span className="ml-2 rounded bg-primary-600 px-2 py-1 text-sm font-medium text-white">
                 Tech
               </span>
             </div>
             <p className="text-gray-400">
-              Innovative IT solutions tailored to your business needs. We help companies transform their ideas into reality through cutting-edge technology.
+              Innovative IT solutions tailored to your business needs. We help companies transform
+              their ideas into reality through cutting-edge technology.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -65,7 +77,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                  className="text-gray-400 transition-colors duration-200 hover:text-primary-400"
                   aria-label={social.href.split('/')[2]}
                 >
                   {social.icon}
@@ -76,13 +88,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                    className="text-gray-400 transition-colors duration-200 hover:text-primary-400"
                   >
                     {link.name}
                   </Link>
@@ -93,13 +105,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Our Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link 
+                  <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                    className="text-gray-400 transition-colors duration-200 hover:text-primary-400"
                   >
                     {service.name}
                   </Link>
@@ -110,13 +122,18 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">Contact Us</h3>
             <ul className="space-y-3">
               {contactInfo.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <span className="mt-1">{item.icon}</span>
                   {item.href ? (
-                    <a href={item.href} className="text-gray-400 hover:text-primary-400 transition-colors duration-200">{item.text}</a>
+                    <a
+                      href={item.href}
+                      className="text-gray-400 transition-colors duration-200 hover:text-primary-400"
+                    >
+                      {item.text}
+                    </a>
                   ) : (
                     <span className="text-gray-400">{item.text}</span>
                   )}
@@ -124,9 +141,9 @@ export default function Footer() {
               ))}
             </ul>
             <div className="mt-6">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors duration-200"
+              <Link
+                href="/contact"
+                className="inline-flex items-center rounded-md border border-transparent bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-primary-700"
               >
                 Get In Touch
               </Link>
@@ -135,18 +152,27 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="mt-12 flex flex-col items-center justify-between border-t border-gray-800 pt-8 md:flex-row">
+          <p className="text-sm text-gray-400">
             &copy; {currentYear} Logic & Pixel Technologies. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
+          <div className="mt-4 flex space-x-6 md:mt-0">
+            <Link
+              href="/privacy"
+              className="text-sm text-gray-400 transition-colors duration-200 hover:text-primary-400"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
+            <Link
+              href="/terms"
+              className="text-sm text-gray-400 transition-colors duration-200 hover:text-primary-400"
+            >
               Terms of Service
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
+            <Link
+              href="/cookies"
+              className="text-sm text-gray-400 transition-colors duration-200 hover:text-primary-400"
+            >
               Cookie Policy
             </Link>
           </div>
