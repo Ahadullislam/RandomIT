@@ -6,7 +6,7 @@ const team = [
   {
     name: 'Mahfuza',
     role: 'CEO & Co-Founder',
-    image: 'public/images/team/mahfuza.png',
+    image: '/images/team/mahfuza.png',
     socials: {
       linkedin: '#',
       twitter: '#',
@@ -15,7 +15,7 @@ const team = [
   {
     name: 'S.R. Babu',
     role: 'CTO & Co-Founder',
-    image: 'public/images/team/babu.png',
+    image: '/images/team/babu.png',
     socials: {
       linkedin: '#',
       twitter: '#',
@@ -24,7 +24,7 @@ const team = [
   {
     name: 'MD Ahadul Islam',
     role: 'Project Manager & Developer',
-    image: 'public/images/team/ahad.png',
+    image: '/images/team/ahad.png',
     socials: {
       linkedin: '#',
       twitter: '#',
@@ -33,7 +33,7 @@ const team = [
   {
     name: 'Mehedi Masum',
     role: 'Designer & Developer',
-    image: 'public/images/team/masum.png',
+    image: '/images/team/masum.png',
     socials: {
       linkedin: '#',
       twitter: '#',
